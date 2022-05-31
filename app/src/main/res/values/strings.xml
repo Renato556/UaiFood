@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">UaiFood</string>
+    <string name="label_senha">Senha</string>
+    <string name="label_email">E-mail</string>
+    <string name="text_forgot">Esqueci minha Senha</string>
+    <string name="text_new">Crie sua conta</string>
 </resources>

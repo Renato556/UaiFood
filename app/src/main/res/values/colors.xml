@@ -9,4 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="laranja">#fe4e1c</color>
     <color name="amarelo">#ff8c31</color>
+    <color name="grey">#FFE6E6E6</color>
+    <color name="primary">#db695c</color>
+    <color name="variante">#a85147</color>
+    <color name="variante1">#5c4542</color>
+    <color name="variante2">#e1a8a2</color>
+    <color name="variante3">#5c2c27</color>
 </resources>
