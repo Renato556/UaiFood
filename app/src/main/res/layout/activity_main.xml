@@ -43,8 +43,7 @@
             android:layout_marginHorizontal="15dp"
             android:background="@null"
             android:hint="@string/hint_email_forgot" />
-
-    </RelativeLayout>
+</RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/relativePassword"

@@ -4,18 +4,15 @@
     <string name="label_email">E-mail</string>
     <string name="text_forgot">Esqueci minha Senha</string>
     <string name="text_new">Crie sua conta</string>
-<<<<<<< Updated upstream
     <string name="text_recuperar_senha">Recuperar\nSenha</string>
     <string name="redefinir">Redefinir</string>
     <string name="recuperar_senha">Recuperar Senha</string>
     <string name="texto_forgot">Por favor entre com seu e-mail\npara recuperar seu acesso</string>
     <string name="hint_email_forgot">email@uaifood.com.br</string>
-=======
     <string name="label_name">Nome</string>
     <string name="text_have_account">Já tenho uma conta</string>
     <string name="text_name">Maria Chiquinha</string>
     <string name="hint_passwd">********</string>
     <string name="label_create_account">Criar conta</string>
     <string name="label_create_your_account">Crie sua conta</string>
->>>>>>> Stashed changes
 </resources>
