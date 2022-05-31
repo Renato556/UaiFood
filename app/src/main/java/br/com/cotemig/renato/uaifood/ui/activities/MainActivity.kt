@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import android.widget.TextView
 import br.com.cotemig.renato.uaifood.R
 import br.com.cotemig.renato.uaifood.models.Account
 import br.com.cotemig.renato.uaifood.services.RetrofitInitializer
@@ -17,10 +18,33 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         var btn_login = findViewById<Button>(R.id.btnLogin)
         btn_login.setOnClickListener{
             login()
         }
+
+        var textForgot = findViewById<TextView>(R.id.textForgot);
+        var textRegister = findViewById<TextView>(R.id.textNew);
+
+        textForgot.setOnClickListener {
+            getForgotScreen()
+        }
+
+        textRegister.setOnClickListener {
+            getRegisterScreen()
+        }
+    }
+
+    fun getForgotScreen(){
+        var intent = Intent(this, ForgotActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun getRegisterScreen(){
+        var intent = Intent(this, RegisterActivity::class.java)
+        startActivity(intent)
+
     }
 
     fun login(){

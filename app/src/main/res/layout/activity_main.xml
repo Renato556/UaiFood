@@ -95,20 +95,21 @@
         android:layout_below="@id/btnLogin"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:clickable="true"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/text_forgot"
         android:textSize="13sp" />
 
     <TextView
         android:id="@+id/textNew"
+        android:clickable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textForgot"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="@string/text_new"
+        android:text="@string/label_create_your_account"
         android:textSize="13sp" />
-
 
 </RelativeLayout>

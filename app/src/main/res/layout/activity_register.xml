@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".ui.activities.RegisterActivity">
 
     <ImageButton
         android:layout_width="50dp"
@@ -128,14 +128,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/roboto_bold"
         android:text="Crie sua\nconta"
         android:textColor="@color/black"
         android:textSize="35sp" />
 
     <TextView
-        android:id="@+id/textForgot"
+        android:id="@+id/textLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnLogin"

@@ -68,12 +68,11 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@id/labelEmail"
+            android:layout_marginHorizontal="15dp"
             android:background="@null"
-            android:hint="@string/hint_email_forgot"
-            android:layout_marginHorizontal="15dp"/>
+            android:hint="@string/hint_email_forgot" />
 
     </RelativeLayout>
-
 
     <Button
         android:id="@+id/btnForgot"
@@ -86,6 +85,5 @@
         android:textColor="@color/white"
         android:background="@drawable/style_button_primary"
         android:fontFamily="@font/roboto_bold"/>
-
 
 </RelativeLayout>
