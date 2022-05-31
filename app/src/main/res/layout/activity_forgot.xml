@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.MainActivity" >
+
+    <ImageButton
+        android:layout_marginTop="40dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/transparent"
+        android:src="@drawable/arrow_back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/recuperar_senha"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/titleForgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_recuperar_senha"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginTop="150dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleForgot"
+        android:text="@string/texto_forgot"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeEmail"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/start"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="44dp"
+        android:padding="5dp"
+        android:background="@drawable/input_background">
+
+        <TextView
+            android:id="@+id/labelEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/label_email" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/labelEmail"
+            android:background="@null"
+            android:hint="@string/hint_email_forgot"
+            android:layout_marginHorizontal="15dp"/>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btnForgot"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/relativeEmail"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="10dp"
+        android:text="@string/redefinir"
+        android:textColor="@color/white"
+        android:background="@drawable/style_button_primary"
+        android:fontFamily="@font/roboto_bold"/>
+
+
+</RelativeLayout>

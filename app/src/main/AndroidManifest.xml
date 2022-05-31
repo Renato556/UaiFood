@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UaiFood">
         <activity
+            android:name=".ui.activities.ForgotActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.activities.MainActivity"
             android:exported="true">
             <intent-filter>
