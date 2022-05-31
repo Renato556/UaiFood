@@ -13,6 +13,9 @@
             android:name=".ui.activities.ForgotActivity"
             android:exported="true" />
         <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.activities.MainActivity"
             android:exported="true">
             <intent-filter>
