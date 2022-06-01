@@ -58,6 +58,8 @@ class RegisterActivity : AppCompatActivity() {
                 if (response.code() == 200) {
                     Toast.makeText(this@RegisterActivity, "Conta criada com sucesso!!", Toast.LENGTH_LONG).show()
                     showLogin()
+                } else {
+                    Toast.makeText(this@RegisterActivity, "Erro ao criar a conta", Toast.LENGTH_LONG).show()
                 }
             }
 
