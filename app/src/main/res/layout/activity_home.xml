@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.Tela1Activity">
+    tools:context=".ui.activities.HomeActivity">
 
 
-    <TextView
+    <ListView
+        android:id="@+id/list_Estabelecimentos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Tela Inicial de Teste para login"
-        android:textSize="40dp"
-        android:gravity="center"/>
+        android:layout_height="match_parent"/>
 
 </RelativeLayout>

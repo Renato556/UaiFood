@@ -17,7 +17,7 @@
             android:name=".ui.activities.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.activities.Tela1Activity"
+            android:name=".ui.activities.HomeActivity"
             android:exported="true" />
         <activity
             android:name=".ui.activities.MainActivity"

@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showLogin(account: Account){
-        var intent = Intent(this, Tela1Activity::class.java)
+        var intent = Intent(this, HomeActivity::class.java)
         intent.putExtra("token", account.token)
         startActivity(intent)
         finish()
