@@ -87,6 +87,7 @@ class MainActivity : AppCompatActivity() {
         var intent = Intent(this, Tela1Activity::class.java)
         intent.putExtra("token", account.token)
         startActivity(intent)
+        finish()
     }
 
 }
