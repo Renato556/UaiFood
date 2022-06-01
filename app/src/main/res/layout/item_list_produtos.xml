@@ -8,8 +8,9 @@
 
     <ImageView
         android:id="@+id/imagem_produto"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
+        android:layout_centerVertical="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:src="@mipmap/ic_launcher_uaifood"/>
 
     <TextView
@@ -22,12 +23,22 @@
         android:text="Most Wanted"/>
 
     <TextView
+        android:id="@+id/descricao_produto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nome_produto"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/imagem_produto"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Descrição do produto irá aparecer neste local, este texto é apenas um teste." />
+
+    <TextView
         android:id="@+id/valor_produto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
         android:layout_toEndOf="@+id/imagem_produto"
-        android:layout_below="@+id/nome_produto"
+        android:layout_below="@+id/descricao_produto"
         android:layout_marginStart="20dp"
         android:layout_marginTop="2dp"
         android:text="R$ 35,00"
