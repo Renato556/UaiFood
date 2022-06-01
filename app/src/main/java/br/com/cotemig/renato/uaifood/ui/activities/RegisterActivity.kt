@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.TextView
 import br.com.cotemig.renato.uaifood.R
 
 class RegisterActivity : AppCompatActivity() {
@@ -12,13 +13,24 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         var arrowBack = findViewById<ImageButton>(R.id.backLogin)
+        var possuiConta = findViewById<TextView>(R.id.textPossuiConta)
 
         arrowBack.setOnClickListener {
             arrowBackLogin();
         }
+
+        possuiConta.setOnClickListener {
+            possuiContaClick()
+        }
     }
 
     fun arrowBackLogin(){
+        var intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    fun possuiContaClick(){
         var intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
