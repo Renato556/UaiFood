@@ -24,7 +24,7 @@
         android:textSize="16sp" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_below="@+id/relativePassword"
@@ -82,8 +82,7 @@
             android:layout_below="@id/labelName"
             android:layout_marginHorizontal="15dp"
             android:background="@null"
-            android:hint="@string/text_name"
-            android:inputType="textPassword" />
+            android:hint="@string/text_name"/>
 
         <TextView
             android:id="@+id/labelName"
