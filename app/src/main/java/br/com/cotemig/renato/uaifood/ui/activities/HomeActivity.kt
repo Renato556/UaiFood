@@ -35,7 +35,7 @@ class HomeActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<List<Estabelecimento>>, t: Throwable) {
-                TODO("Not yet implemented")
+                Toast.makeText(this@HomeActivity, "Ocorreu um erro, tente novamente", Toast.LENGTH_LONG).show()
             }
         })
     }

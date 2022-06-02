@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Account>, t: Throwable) {
-                Toast.makeText(this@MainActivity, "ops", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, "Ocorreu um erro, tente novamente", Toast.LENGTH_LONG).show()
 
             }
         })

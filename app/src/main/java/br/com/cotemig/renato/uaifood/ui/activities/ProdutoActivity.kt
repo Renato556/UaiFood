@@ -36,7 +36,7 @@ class ProdutoActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<List<Produto>>, t: Throwable) {
-                TODO("Not yet implemented")
+                Toast.makeText(this@ProdutoActivity, "Ocorreu um erro, tente novamente", Toast.LENGTH_LONG).show()
             }
         })
     }
