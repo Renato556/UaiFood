@@ -1,12 +1,14 @@
 package br.com.cotemig.renato.uaifood.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
+import android.widget.Toast
 import br.com.cotemig.renato.uaifood.R
 import br.com.cotemig.renato.uaifood.models.Estabelecimento
 import br.com.cotemig.renato.uaifood.services.RetrofitInitializer
-import br.com.cotemig.renato.uaifood.ui.adapters.UaiFoodAdapter
+import br.com.cotemig.renato.uaifood.ui.adapters.EstabelecimentoAdapter
 import retrofit2.Call
 import retrofit2.Response
 
@@ -19,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun getEstabelecimentos(){
-        var s = RetrofitInitializer().serviceEstabelecimentos()
+        var s = RetrofitInitializer().serviceUaiFood()
         var call = s.getRestaurantes()
 
         call.enqueue(object : retrofit2.Callback<List<Estabelecimento>>{
@@ -40,6 +42,16 @@ class HomeActivity : AppCompatActivity() {
 
     fun showListEstabelecimentos(list: List<Estabelecimento>){
         var estabelecimento = findViewById<ListView>(R.id.list_Estabelecimentos)
-        estabelecimento.adapter = UaiFoodAdapter(this, list)
+        estabelecimento.adapter = EstabelecimentoAdapter(this, list)
+
+        estabelecimento.setOnItemClickListener { parent, view, position, id ->
+            showProdutos(position)
+        }
+    }
+
+    fun showProdutos(position: Int) {
+        var intent = Intent(this, ProdutoActivity::class.java)
+        intent.putExtra("id", (position + 1).toString())
+        startActivity(intent)
     }
 }

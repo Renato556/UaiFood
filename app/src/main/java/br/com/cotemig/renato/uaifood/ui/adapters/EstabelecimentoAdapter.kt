@@ -11,7 +11,7 @@ import br.com.cotemig.renato.uaifood.R
 import br.com.cotemig.renato.uaifood.models.Estabelecimento
 import coil.load
 
-class UaiFoodAdapter(var context : Context, var list: List<Estabelecimento>) : BaseAdapter() {
+class EstabelecimentoAdapter(var context : Context, var list: List<Estabelecimento>) : BaseAdapter() {
 
     override fun getCount(): Int {
         return list.size

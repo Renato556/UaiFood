@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.cotemig.renato.uaifood">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_uaifood"
@@ -10,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UaiFood">
         <activity
-
+            android:name=".ui.activities.ProdutoActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.ForgotActivity"
             android:exported="true" />
         <activity
@@ -29,7 +33,5 @@
             </intent-filter>
         </activity>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
