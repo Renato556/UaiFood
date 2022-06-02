@@ -39,13 +39,11 @@ class MainActivity : AppCompatActivity() {
     fun getForgotScreen(){
         var intent = Intent(this, ForgotActivity::class.java)
         startActivity(intent)
-        finish()
     }
 
     fun getRegisterScreen(){
         var intent = Intent(this, RegisterActivity::class.java)
         startActivity(intent)
-        finish()
     }
 
     fun login(){
