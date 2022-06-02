@@ -54,7 +54,6 @@ class ForgotActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(this@ForgotActivity, "Erro ao recuperar senha", Toast.LENGTH_LONG).show()
                 }
-                println(response.code())
             }
 
             override fun onFailure(call: Call<Account>, t: Throwable) {
