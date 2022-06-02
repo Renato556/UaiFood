@@ -2,14 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:clickable="true"
-    android:layout_marginHorizontal="20dp"
-    android:layout_marginTop="10dp">
+    android:clickable="true">
 
     <ImageView
         android:id="@+id/imagem_estabelecimento"
         android:layout_width="65dp"
         android:layout_height="65dp"
+        android:layout_margin="5dp"
         android:src="@mipmap/ic_launcher_uaifood"/>
 
     <TextView
@@ -17,6 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_bold"
+        android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/imagem_estabelecimento"
         android:layout_marginStart="20dp"
         android:text="Wanted Hamburgueria"/>
