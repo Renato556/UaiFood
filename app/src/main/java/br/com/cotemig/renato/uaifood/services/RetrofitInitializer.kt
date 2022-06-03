@@ -23,12 +23,12 @@ class RetrofitInitializer {
                 .create()).build()
 
 
-    fun serviceAccount(): ServiceAccount {
-        return retrofit.create(ServiceAccount::class.java)
+    fun serviceAccount(): AccountService {
+        return retrofit.create(AccountService::class.java)
     }
 
-    fun serviceUaiFood(): ServiceUaiFood{
-        return retrofitUaiFood.create(ServiceUaiFood::class.java)
+    fun serviceUaiFood(): UaiFoodService{
+        return retrofitUaiFood.create(UaiFoodService::class.java)
     }
 
 }

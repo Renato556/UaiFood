@@ -6,7 +6,7 @@ import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-interface ServiceUaiFood {
+interface UaiFoodService {
     @GET("lista_restaurantes/lista_restaurantes.txt")
     fun getRestaurantes() : Call<List<Estabelecimento>>
 
