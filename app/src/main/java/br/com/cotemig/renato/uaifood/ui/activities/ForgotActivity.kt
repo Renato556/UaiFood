@@ -19,7 +19,6 @@ class ForgotActivity : AppCompatActivity() {
         setContentView(R.layout.activity_forgot)
 
         var arrowBack = findViewById<ImageButton>(R.id.backLogin)
-
         arrowBack.setOnClickListener {
             arrowBackLogin();
         }

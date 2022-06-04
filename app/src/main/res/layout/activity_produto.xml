@@ -6,28 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".ui.activities.ProdutoActivity">
 
-    <TextView
-        android:id="@+id/nome_restaurante"
+    <RelativeLayout
+        android:id="@+id/relativeTitle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_bold"
-        android:layout_toEndOf="@+id/img_estabelecimento"
-        android:layout_marginStart="20dp"
-        android:textSize="30sp"
-        android:text="Wanted Hamburgueria"/>
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/img_estabelecimento"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_margin="5dp"
-        android:src="@mipmap/ic_launcher_uaifood"/>
+        <ImageButton
+            android:id="@+id/backProdutos"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Produtos"
+            android:textSize="17sp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular"/>
+
+        <TextView
+            android:id="@+id/nome_restaurante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/backProdutos"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/img_estabelecimento"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Wanted Hamburgueria"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/img_estabelecimento"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_below="@id/backProdutos"
+            android:layout_margin="5dp"
+            android:src="@mipmap/ic_launcher_uaifood" />
+
+    </RelativeLayout>
+
 
     <ListView
         android:id="@+id/list_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@color/transparent"
-        android:layout_below="@id/img_estabelecimento" />
+        android:layout_below="@id/relativeTitle"
+        android:divider="@color/transparent" />
 
 </RelativeLayout>

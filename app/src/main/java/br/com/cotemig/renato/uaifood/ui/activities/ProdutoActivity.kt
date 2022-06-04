@@ -3,10 +3,8 @@ package br.com.cotemig.renato.uaifood.ui.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.ListView
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import br.com.cotemig.renato.uaifood.R
 import br.com.cotemig.renato.uaifood.models.Estabelecimento
 import br.com.cotemig.renato.uaifood.models.Produto
@@ -29,6 +27,11 @@ class ProdutoActivity : AppCompatActivity() {
         imagemEstabelecimento.load(intent.getStringExtra("imagemEstabelecimento"))
 
         getProduto(id)
+
+        var arrowBack = findViewById<ImageButton>(R.id.backProdutos)
+        arrowBack.setOnClickListener {
+            arrowBackEstabelecimentos();
+        }
     }
 
     fun getProduto(id : String){
@@ -53,5 +56,11 @@ class ProdutoActivity : AppCompatActivity() {
     fun showListProduto(list : List<Produto>){
         var produto = findViewById<ListView>(R.id.list_item)
         produto.adapter = ProdutoAdapter(this, list)
+    }
+
+    fun arrowBackEstabelecimentos(){
+        var intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
