@@ -6,10 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".ui.activities.ProdutoActivity">
 
+    <TextView
+        android:id="@+id/nome_restaurante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_toEndOf="@+id/img_estabelecimento"
+        android:layout_marginStart="20dp"
+        android:textSize="30sp"
+        android:text="Wanted Hamburgueria"/>
+
+    <ImageView
+        android:id="@+id/img_estabelecimento"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_margin="5dp"
+        android:src="@mipmap/ic_launcher_uaifood"/>
+
     <ListView
         android:id="@+id/list_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@color/transparent" />
+        android:divider="@color/transparent"
+        android:layout_below="@id/img_estabelecimento" />
 
 </RelativeLayout>

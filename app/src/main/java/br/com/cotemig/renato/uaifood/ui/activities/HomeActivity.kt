@@ -45,13 +45,15 @@ class HomeActivity : AppCompatActivity() {
         estabelecimento.adapter = EstabelecimentoAdapter(this, list)
 
         estabelecimento.setOnItemClickListener { parent, view, position, id ->
-            showProdutos(position)
+            showProdutos(list[position])
         }
     }
 
-    fun showProdutos(position: Int) {
+    fun showProdutos(estabelecimento: Estabelecimento) {
         var intent = Intent(this, ProdutoActivity::class.java)
-        intent.putExtra("id", (position + 1).toString())
+        intent.putExtra("id", estabelecimento.id)
+        intent.putExtra("nomeEstabelecimento", estabelecimento.nome)
+        intent.putExtra("imagemEstabelecimento", estabelecimento.imagem)
         startActivity(intent)
     }
 }

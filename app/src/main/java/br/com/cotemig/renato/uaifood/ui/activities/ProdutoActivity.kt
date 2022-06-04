@@ -3,13 +3,16 @@ package br.com.cotemig.renato.uaifood.ui.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.ListView
+import android.widget.TextView
 import android.widget.Toast
 import br.com.cotemig.renato.uaifood.R
 import br.com.cotemig.renato.uaifood.models.Estabelecimento
 import br.com.cotemig.renato.uaifood.models.Produto
 import br.com.cotemig.renato.uaifood.services.RetrofitInitializer
 import br.com.cotemig.renato.uaifood.ui.adapters.ProdutoAdapter
+import coil.load
 import retrofit2.Call
 import retrofit2.Response
 
@@ -19,6 +22,12 @@ class ProdutoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_produto)
 
         var id = intent.getStringExtra("id").toString()
+        var nomeEstabelecimento = findViewById<TextView>(R.id.nome_restaurante)
+        var imagemEstabelecimento = findViewById<ImageView>(R.id.img_estabelecimento)
+
+        nomeEstabelecimento.text = intent.getStringExtra("nomeEstabelecimento").toString()
+        imagemEstabelecimento.load(intent.getStringExtra("imagemEstabelecimento"))
+
         getProduto(id)
     }
 

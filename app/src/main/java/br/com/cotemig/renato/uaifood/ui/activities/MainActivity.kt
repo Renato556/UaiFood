@@ -71,7 +71,6 @@ class MainActivity : AppCompatActivity() {
                     this@MainActivity, "Usuário não encontrado", Toast.LENGTH_LONG).show()
 
                 }
-
             }
 
             override fun onFailure(call: Call<Account>, t: Throwable) {
