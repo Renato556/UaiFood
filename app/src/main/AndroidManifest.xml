@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UaiFood">
         <activity
+            android:name=".DetalheProdutoActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.ProdutoActivity"
             android:exported="false" />
         <activity
@@ -22,7 +25,7 @@
             android:exported="true" />
         <activity
             android:name=".ui.activities.HomeActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".ui.activities.MainActivity"
             android:exported="true">
