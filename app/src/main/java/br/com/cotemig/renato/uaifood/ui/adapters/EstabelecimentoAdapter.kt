@@ -10,6 +10,7 @@ import android.widget.TextView
 import br.com.cotemig.renato.uaifood.R
 import br.com.cotemig.renato.uaifood.models.Estabelecimento
 import coil.load
+import coil.transform.RoundedCornersTransformation
 
 class EstabelecimentoAdapter(var context : Context, var list: List<Estabelecimento>) : BaseAdapter() {
 
@@ -29,7 +30,7 @@ class EstabelecimentoAdapter(var context : Context, var list: List<Estabelecimen
         var view = LayoutInflater.from(context).inflate(R.layout.item_list_estabelecimento, null)
 
         var imagem = view.findViewById<ImageView>(R.id.imagem_estabelecimento)
-        imagem.load(list[p0].imagem)
+        imagem.load(list[p0].imagem){transformations(RoundedCornersTransformation((100).toFloat()))}
 
         var nome = view.findViewById<TextView>(R.id.nome_estabelecimento)
         nome.text = list[p0].nome
