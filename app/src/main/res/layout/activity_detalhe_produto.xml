@@ -28,7 +28,9 @@
         android:id="@+id/img_produto_detalhe"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_below="@+id/backProdutos"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/ic_launcher_uaifood_foreground"/>
 
     <TextView
         android:id="@+id/nome_produto_detalhe"

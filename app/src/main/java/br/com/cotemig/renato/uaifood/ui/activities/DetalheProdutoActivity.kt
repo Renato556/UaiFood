@@ -1,5 +1,6 @@
 package br.com.cotemig.renato.uaifood.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
@@ -24,8 +25,12 @@ class DetalheProdutoActivity : AppCompatActivity() {
         descProduto.text = intent.getStringExtra("descProduto").toString()
         precoProduto.text = intent.getStringExtra("precoProduto").toString()
 
-        var btn_adicionar = findViewById<Button>(R.id.btn_adicionar)
-        btn_adicionar.text = "Adicionar     " + intent.getStringExtra("precoProduto").toString()
+        var btnAdicionar = findViewById<Button>(R.id.btn_adicionar)
+
+        var arrowBack = findViewById<ImageButton>(R.id.backProdutos)
+        arrowBack.setOnClickListener {
+            backProdutos()
+        }
 
         adicionaRemove()
     }
@@ -46,5 +51,9 @@ class DetalheProdutoActivity : AppCompatActivity() {
                 txtNovaQtd.text = (txtQtd.text.toString().toInt() - 1).toString();
             }
         }
+    }
+
+    fun backProdutos(){
+        finish()
     }
 }
