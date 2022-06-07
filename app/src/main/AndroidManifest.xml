@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UaiFood">
         <activity
-            android:name=".DetalheProdutoActivity"
+            android:name=".ui.activities.DetalheProdutoActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activities.ProdutoActivity"
