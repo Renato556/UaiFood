@@ -4,8 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.ProdutoActivity"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".ui.activities.ProdutoActivity">
+
+    <ListView
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativeTitle"
+        android:layout_marginTop="20dp"
+        android:divider="@color/transparent" />
+
 
     <RelativeLayout
         android:id="@+id/relativeTitle"
@@ -20,14 +29,13 @@
             android:background="@color/transparent"
             android:src="@drawable/arrow_back" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="23dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Lista de Produtos"
-            android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/img_estabelecimento"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_below="@id/backProdutos"
+            android:layout_margin="5dp"
+            android:src="@mipmap/ic_launcher_uaifood" />
 
         <TextView
             android:id="@+id/nome_restaurante"
@@ -40,23 +48,15 @@
             android:text="Wanted Hamburgueria"
             android:textSize="30sp" />
 
-        <ImageView
-            android:id="@+id/img_estabelecimento"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_below="@id/backProdutos"
-            android:layout_margin="5dp"
-            android:src="@mipmap/ic_launcher_uaifood" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Lista de Produtos"
+            android:textSize="16sp" />
 
     </RelativeLayout>
-
-
-    <ListView
-        android:id="@+id/list_item"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/relativeTitle"
-        android:divider="@color/transparent"
-        android:layout_marginTop="20dp"/>
 
 </RelativeLayout>

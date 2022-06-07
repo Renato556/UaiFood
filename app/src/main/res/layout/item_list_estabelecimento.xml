@@ -8,25 +8,25 @@
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_margin="5dp"
-        android:src="@mipmap/ic_launcher_uaifood"/>
+        android:src="@mipmap/ic_launcher_uaifood" />
 
     <TextView
         android:id="@+id/nome_estabelecimento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_bold"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/imagem_estabelecimento"
-        android:layout_marginStart="20dp"/>
+        android:fontFamily="@font/roboto_bold" />
 
     <TextView
         android:id="@+id/descricao_estabelecimento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
-        android:layout_toEndOf="@+id/imagem_estabelecimento"
         android:layout_below="@+id/nome_estabelecimento"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="2dp"/>
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/imagem_estabelecimento"
+        android:fontFamily="@font/roboto_regular" />
 
 </RelativeLayout>

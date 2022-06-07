@@ -7,6 +7,17 @@
     tools:context=".ui.activities.DetalheProdutoActivity">
 
 
+    <EditText
+        android:id="@+id/obs_produto_detalhe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/valor_produto_detalhe"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@null"
+        android:hint="@string/alguma_observaco"
+        android:textSize="15sp" />
+
     <ImageButton
         android:id="@+id/backProdutos"
         android:layout_width="50dp"
@@ -15,42 +26,84 @@
         android:background="@color/transparent"
         android:src="@drawable/arrow_back" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/detalhe_do_produto"
-        android:textSize="16sp" />
-
     <ImageView
         android:id="@+id/img_produto_detalhe"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_below="@+id/backProdutos"
         android:layout_marginTop="10dp"
-        android:src="@mipmap/ic_launcher_uaifood_foreground"/>
+        android:src="@mipmap/ic_launcher_uaifood_foreground" />
 
-    <TextView
-        android:id="@+id/nome_produto_detalhe"
+    <LinearLayout
+        android:id="@+id/linear_barra_compras"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/img_produto_detalhe"
-        android:fontFamily="@font/roboto_bold"
-        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <Button
+                android:id="@+id/btn_menos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/primary"
+                android:text="@string/menos"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_mais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/primary"
+                android:text="@string/Mais"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_qtd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:text="@string/qtd_inicial"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_adicionar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:text="@string/btn_adicionar"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/desc_produto_detalhe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/nome_produto_detalhe"
-        android:fontFamily="@font/roboto_regular"
-        android:textSize="14sp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/valor_produto_detalhe"
@@ -61,78 +114,25 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto_regular"
         android:textColor="@color/green"
-        android:textSize="15sp"/>
+        android:textSize="15sp" />
 
-    <EditText
-        android:id="@+id/obs_produto_detalhe"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/detalhe_do_produto"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/nome_produto_detalhe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/valor_produto_detalhe"
+        android:layout_below="@+id/img_produto_detalhe"
         android:layout_marginHorizontal="20dp"
-        android:hint="@string/alguma_observaco"
-        android:textSize="15sp"
-        android:background="@null"
-        android:layout_marginTop="40dp"/>
-
-    <LinearLayout
-        android:id="@+id/linear_barra_compras"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:layout_marginHorizontal="20dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3">
-
-            <Button
-                android:id="@+id/btn_menos"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/primary"
-                android:textColor="@color/white"
-                android:text="@string/menos"/>
-
-            <TextView
-                android:id="@+id/txt_qtd"
-                android:layout_weight="1.3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/qtd_inicial"
-                android:textAlignment="center"/>
-
-            <Button
-                android:id="@+id/btn_mais"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/primary"
-                android:textColor="@color/white"
-                android:text="@string/Mais"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="10dp">
-
-            <Button
-                android:id="@+id/btn_adicionar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:background="@color/primary"
-                android:textColor="@color/white"
-                android:text="@string/btn_adicionar"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="20sp" />
 
 </RelativeLayout>

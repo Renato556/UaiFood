@@ -6,76 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.activities.MainActivity">
 
-    <TextView
-        android:id="@+id/start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="150dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/bem_vindo"
-        android:textColor="@color/black"
-        android:textSize="35sp" />
-
-    <RelativeLayout
-        android:id="@+id/relativeEmail"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_below="@+id/start"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="44dp"
-        android:padding="5dp"
-        android:background="@drawable/input_background">
-
-        <TextView
-            android:id="@+id/labelEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="@string/label_email" />
-
-        <EditText
-            android:id="@+id/editEmail"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@id/labelEmail"
-            android:layout_marginHorizontal="15dp"
-            android:background="@null"
-            android:hint="@string/hint_email_forgot" />
-</RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativePassword"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_below="@+id/relativeEmail"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="20dp"
-        android:padding="5dp"
-        android:background="@drawable/input_background">
-
-        <TextView
-            android:id="@+id/labelPass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="@string/label_senha" />
-
-        <EditText
-            android:id="@+id/editPassword"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@id/labelPass"
-            android:layout_marginHorizontal="15dp"
-            android:background="@null"
-            android:hint="@string/hint_passwd"
-            android:inputType="textPassword" />
-
-    </RelativeLayout>
-
-
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
@@ -87,6 +17,76 @@
         android:fontFamily="@font/roboto_bold"
         android:text="@string/btn_entrar"
         android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/relativePassword"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/relativeEmail"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_background"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/labelPass"
+            android:layout_marginHorizontal="15dp"
+            android:background="@null"
+            android:hint="@string/hint_passwd"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/labelPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/label_senha" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeEmail"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/start"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/input_background"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/labelEmail"
+            android:layout_marginHorizontal="15dp"
+            android:background="@null"
+            android:hint="@string/hint_email_forgot" />
+
+        <TextView
+            android:id="@+id/labelEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/label_email" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/bem_vindo"
+        android:textColor="@color/black"
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/textForgot"
@@ -102,12 +102,12 @@
 
     <TextView
         android:id="@+id/textNew"
-        android:clickable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textForgot"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:clickable="true"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/label_create_your_account"
         android:textSize="13sp" />

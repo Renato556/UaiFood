@@ -7,20 +7,20 @@
 
     <ImageView
         android:id="@+id/imagem_produto"
-        android:layout_centerVertical="true"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:layout_centerVertical="true"
         android:layout_marginTop="15dp"
-        android:src="@mipmap/ic_launcher_uaifood"/>
+        android:src="@mipmap/ic_launcher_uaifood" />
 
     <TextView
         android:id="@+id/nome_produto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_bold"
-        android:layout_toEndOf="@+id/imagem_produto"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/imagem_produto"
+        android:fontFamily="@font/roboto_bold" />
 
     <TextView
         android:id="@+id/descricao_produto"
@@ -29,17 +29,17 @@
         android:layout_below="@+id/nome_produto"
         android:layout_marginStart="20dp"
         android:layout_toEndOf="@+id/imagem_produto"
-        android:fontFamily="@font/roboto_regular"/>
+        android:fontFamily="@font/roboto_regular" />
 
     <TextView
         android:id="@+id/valor_produto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
-        android:layout_toEndOf="@+id/imagem_produto"
         android:layout_below="@+id/descricao_produto"
         android:layout_marginStart="20dp"
         android:layout_marginTop="2dp"
-        android:textColor="@color/green"/>
+        android:layout_toEndOf="@+id/imagem_produto"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/green" />
 
 </RelativeLayout>
