@@ -53,14 +53,27 @@ class ProdutoActivity : AppCompatActivity() {
         })
     }
 
-    fun showListProduto(list : List<Produto>){
-        var produto = findViewById<ListView>(R.id.list_item)
-        produto.adapter = ProdutoAdapter(this, list)
+    fun loadProduto(produto: Produto) {
+        var intent = Intent(this, DetalheProdutoActivity::class.java)
+        intent.putExtra("nomeProduto", produto.nomePrato)
+        intent.putExtra("descProduto", produto.descricaoPrato)
+        intent.putExtra("precoProduto", produto.precoPrato)
+        startActivity(intent)
     }
 
-    fun arrowBackEstabelecimentos(){
+    fun showListProduto(list : List<Produto>) {
+        var produto = findViewById<ListView>(R.id.list_item)
+        produto.adapter = ProdutoAdapter(this, list)
+
+        produto.setOnItemClickListener { parent, view, position, id ->
+            loadProduto(list[position])
+        }
+    }
+
+    fun arrowBackEstabelecimentos() {
         var intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
         finish()
     }
+
 }

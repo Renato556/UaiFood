@@ -12,4 +12,7 @@ interface UaiFoodService {
 
     @GET("restaurantes/{id}.txt")
     fun getPratos(@Path("id") id : String) : Call<List<Produto>>
+
+    @GET("pratos.txt")
+    fun getPrato(@Path("nomePrato") nomePrato : String) : Call<List<Produto>>
 }
