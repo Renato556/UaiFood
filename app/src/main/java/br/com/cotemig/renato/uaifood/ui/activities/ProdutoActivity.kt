@@ -71,8 +71,6 @@ class ProdutoActivity : AppCompatActivity() {
     }
 
     fun arrowBackEstabelecimentos() {
-        var intent = Intent(this, HomeActivity::class.java)
-        startActivity(intent)
         finish()
     }
 
