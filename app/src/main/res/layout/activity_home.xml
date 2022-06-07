@@ -46,7 +46,8 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/home" />
+                    android:src="@drawable/home"
+                    android:clickable="true"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -77,7 +78,8 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/search" />
+                    android:src="@drawable/search"
+                    android:clickable="true"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -108,7 +110,8 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/shopping_bag" />
+                    android:src="@drawable/shopping_bag"
+                    android:clickable="true"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -139,7 +142,8 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/account_circle" />
+                    android:src="@drawable/account_circle"
+                    android:clickable="true" />
 
                 <TextView
                     android:layout_width="wrap_content"

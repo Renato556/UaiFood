@@ -3,6 +3,8 @@ package br.com.cotemig.renato.uaifood.ui.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.ListView
 import android.widget.Toast
 import br.com.cotemig.renato.uaifood.R
@@ -18,6 +20,12 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         getEstabelecimentos()
+
+        var profile = findViewById<ImageView>(R.id.icon_perfil)
+
+        profile.setOnClickListener {
+            showProfile()
+        }
     }
 
     fun getEstabelecimentos(){
@@ -40,7 +48,7 @@ class HomeActivity : AppCompatActivity() {
         })
     }
 
-    fun showListEstabelecimentos(list: List<Estabelecimento>){
+    fun showListEstabelecimentos(list: List<Estabelecimento>) {
         var estabelecimento = findViewById<ListView>(R.id.list_Estabelecimentos)
         estabelecimento.adapter = EstabelecimentoAdapter(this, list)
 
@@ -55,5 +63,13 @@ class HomeActivity : AppCompatActivity() {
         intent.putExtra("nomeEstabelecimento", estabelecimento.nome)
         intent.putExtra("imagemEstabelecimento", estabelecimento.imagem)
         startActivity(intent)
+    }
+
+    fun showProfile() {
+        var intent = Intent(this, ProfileActivity::class.java)
+        intent.putExtra("name", this.intent.getStringExtra("name"))
+        intent.putExtra("email", this.intent.getStringExtra("email"))
+        startActivity(intent)
+        finish()
     }
 }

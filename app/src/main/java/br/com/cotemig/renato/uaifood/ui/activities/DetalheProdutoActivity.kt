@@ -21,7 +21,6 @@ class DetalheProdutoActivity : AppCompatActivity() {
         var precoProduto = findViewById<TextView>(R.id.valor_produto_detalhe)
 
         nomeProduto.text = intent.getStringExtra("nomeProduto").toString()
-
         descProduto.text = intent.getStringExtra("descProduto").toString()
         precoProduto.text = intent.getStringExtra("precoProduto").toString()
 
