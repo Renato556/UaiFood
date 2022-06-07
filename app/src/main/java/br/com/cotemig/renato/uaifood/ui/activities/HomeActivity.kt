@@ -3,10 +3,7 @@ package br.com.cotemig.renato.uaifood.ui.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.ListView
-import android.widget.Toast
+import android.widget.*
 import br.com.cotemig.renato.uaifood.R
 import br.com.cotemig.renato.uaifood.models.Estabelecimento
 import br.com.cotemig.renato.uaifood.services.RetrofitInitializer
@@ -21,10 +18,14 @@ class HomeActivity : AppCompatActivity() {
 
         getEstabelecimentos()
 
-        var profile = findViewById<ImageView>(R.id.icon_perfil)
-
+        var profile = findViewById<RelativeLayout>(R.id.profile)
         profile.setOnClickListener {
             showProfile()
+        }
+
+        var cart = findViewById<RelativeLayout>(R.id.cart)
+        cart.setOnClickListener {
+            showCart()
         }
     }
 
@@ -73,6 +74,12 @@ class HomeActivity : AppCompatActivity() {
         var intent = Intent(this, ProfileActivity::class.java)
         intent.putExtra("name", this.intent.getStringExtra("name"))
         intent.putExtra("email", this.intent.getStringExtra("email"))
+        startActivity(intent)
+        finish()
+    }
+
+    fun showCart() {
+        var intent = Intent(this, CartActivity::class.java)
         startActivity(intent)
         finish()
     }
