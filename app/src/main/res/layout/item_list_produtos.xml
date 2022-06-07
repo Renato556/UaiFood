@@ -20,8 +20,7 @@
         android:fontFamily="@font/roboto_bold"
         android:layout_toEndOf="@+id/imagem_produto"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:text="Most Wanted"/>
+        android:layout_marginTop="15dp"/>
 
     <TextView
         android:id="@+id/descricao_produto"
@@ -30,8 +29,7 @@
         android:layout_below="@+id/nome_produto"
         android:layout_marginStart="20dp"
         android:layout_toEndOf="@+id/imagem_produto"
-        android:fontFamily="@font/roboto_regular"
-        android:text="Descrição do produto irá aparecer neste local, este texto é apenas um teste." />
+        android:fontFamily="@font/roboto_regular"/>
 
     <TextView
         android:id="@+id/valor_produto"
@@ -42,7 +40,6 @@
         android:layout_below="@+id/descricao_produto"
         android:layout_marginStart="20dp"
         android:layout_marginTop="2dp"
-        android:text="R$ 35,00"
         android:textColor="@color/green"/>
 
 </RelativeLayout>

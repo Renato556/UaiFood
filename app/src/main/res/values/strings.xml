@@ -14,4 +14,22 @@
     <string name="hint_passwd">********</string>
     <string name="label_create_account">Criar conta</string>
     <string name="label_create_your_account">Crie sua conta</string>
+    <string name="btn_adicionar">Adicionar</string>
+    <string name="alguma_observaco">Alguma Observação?</string>
+    <string name="menos">-</string>
+    <string name="Mais">+</string>
+    <string name="qtd_inicial">1</string>
+    <string name="detalhe_do_produto">Detalhe do Produto</string>
+    <string name="lojas">Lojas</string>
+    <string name="icon_inicio">Início</string>
+    <string name="icon_busca">Busca</string>
+    <string name="icon_pedidos">Pedidos</string>
+    <string name="icon_perfil">Perfil</string>
+    <string name="bem_vindo">Bem Vindo</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="perfil">Perfil</string>
+    <string name="nome_cadastrado">Nome cadastrado</string>
+    <string name="email_cadastrado">Email cadastrado</string>
+    <string name="logout">Logout</string>
+    <string name="crie_sua_conta">Crie sua\nconta</string>
 </resources>

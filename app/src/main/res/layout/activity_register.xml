@@ -82,7 +82,7 @@
             android:layout_below="@id/labelName"
             android:layout_marginHorizontal="15dp"
             android:background="@null"
-            android:hint="@string/text_name"/>
+            android:hint="@string/text_name" />
 
         <TextView
             android:id="@+id/labelName"
@@ -130,7 +130,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="100dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Crie sua\nconta"
+        android:text="@string/crie_sua_conta"
         android:textColor="@color/black"
         android:textSize="35sp" />
 
@@ -139,9 +139,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnRegister"
-        android:clickable="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:clickable="true"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/text_have_account"
         android:textSize="13sp" />

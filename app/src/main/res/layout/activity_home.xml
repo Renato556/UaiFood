@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lojas"
+        android:text="@string/lojas"
         android:fontFamily="@font/roboto_bold"
         android:textSize="20sp"
         android:layout_marginStart="20dp"
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
-        android:paddingTop="15dp">
+        android:paddingTop="10dp">
 
         <LinearLayout
             android:id="@+id/linear_btn_inicio"
@@ -46,17 +46,17 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/home"
-                    android:clickable="true"/>
+                    android:clickable="true"
+                    android:src="@drawable/home" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/icon_home"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Início"
-                    android:layout_marginBottom="10dp"/>
+                    android:text="@string/icon_inicio" />
 
             </RelativeLayout>
 
@@ -78,17 +78,17 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/search"
-                    android:clickable="true"/>
+                    android:clickable="true"
+                    android:src="@drawable/search" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/icon_busca"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Busca"
-                    android:layout_marginBottom="10dp"/>
+                    android:text="@string/icon_busca" />
 
             </RelativeLayout>
 
@@ -110,17 +110,17 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/shopping_bag"
-                    android:clickable="true"/>
+                    android:clickable="true"
+                    android:src="@drawable/shopping_bag" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/icon_pedidos"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Pedidos"
-                    android:layout_marginBottom="10dp"/>
+                    android:text="@string/icon_pedidos" />
 
             </RelativeLayout>
 
@@ -142,17 +142,17 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/account_circle"
-                    android:clickable="true" />
+                    android:clickable="true"
+                    android:src="@drawable/account_circle" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/icon_perfil"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Perfil"
-                    android:layout_marginBottom="10dp"/>
+                    android:text="@string/icon_perfil" />
 
             </RelativeLayout>
 

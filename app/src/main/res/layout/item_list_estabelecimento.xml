@@ -17,8 +17,7 @@
         android:fontFamily="@font/roboto_bold"
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/imagem_estabelecimento"
-        android:layout_marginStart="20dp"
-        android:text="Wanted Hamburgueria"/>
+        android:layout_marginStart="20dp"/>
 
     <TextView
         android:id="@+id/descricao_estabelecimento"
@@ -28,7 +27,6 @@
         android:layout_toEndOf="@+id/imagem_estabelecimento"
         android:layout_below="@+id/nome_estabelecimento"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="2dp"
-        android:text="Lanches"/>
+        android:layout_marginTop="2dp"/>
 
 </RelativeLayout>

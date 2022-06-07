@@ -26,7 +26,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="23dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="Produtos"
+            android:text="Lista de Produtos"
             android:textSize="16sp" />
 
         <TextView

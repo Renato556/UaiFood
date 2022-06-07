@@ -24,6 +24,9 @@ class DetalheProdutoActivity : AppCompatActivity() {
         descProduto.text = intent.getStringExtra("descProduto").toString()
         precoProduto.text = intent.getStringExtra("precoProduto").toString()
 
+        var btn_adicionar = findViewById<Button>(R.id.btn_adicionar)
+        btn_adicionar.text = "Adicionar     " + intent.getStringExtra("precoProduto").toString()
+
         adicionaRemove()
     }
 
