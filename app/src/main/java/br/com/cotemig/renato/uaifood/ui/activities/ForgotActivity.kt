@@ -20,7 +20,7 @@ class ForgotActivity : AppCompatActivity() {
 
         var arrowBack = findViewById<ImageButton>(R.id.backLogin)
         arrowBack.setOnClickListener {
-            arrowBackLogin();
+            arrowBackLogin()
         }
 
         var btnRedefinir = findViewById<Button>(R.id.btnForgot)
@@ -29,13 +29,13 @@ class ForgotActivity : AppCompatActivity() {
         }
     }
 
-    fun arrowBackLogin(){
+    fun arrowBackLogin() {
         var intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
     }
 
-    fun forgotClick(){
+    fun forgotClick() {
         var email = findViewById<EditText>(R.id.editEmail)
 
         var account = Account()
@@ -48,15 +48,27 @@ class ForgotActivity : AppCompatActivity() {
         call.enqueue(object : retrofit2.Callback<Account> {
             override fun onResponse(call: Call<Account>, response: Response<Account>) {
                 if (response.code() == 204) {
-                    Toast.makeText(this@ForgotActivity, "Email de recuperação enviado", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        this@ForgotActivity,
+                        "Email de recuperação enviado",
+                        Toast.LENGTH_LONG
+                    ).show()
                     arrowBackLogin()
                 } else {
-                    Toast.makeText(this@ForgotActivity, "Erro ao recuperar senha", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        this@ForgotActivity,
+                        "Erro ao recuperar senha",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
             }
 
             override fun onFailure(call: Call<Account>, t: Throwable) {
-                Toast.makeText(this@ForgotActivity, "Ocorreu um erro, tente novamente", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this@ForgotActivity,
+                    "Ocorreu um erro, tente novamente",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         })
     }

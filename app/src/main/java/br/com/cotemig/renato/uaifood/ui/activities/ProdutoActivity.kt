@@ -30,7 +30,7 @@ class ProdutoActivity : AppCompatActivity() {
 
         var arrowBack = findViewById<ImageButton>(R.id.backProdutos)
         arrowBack.setOnClickListener {
-            arrowBackEstabelecimentos();
+            arrowBackEstabelecimentos()
         }
     }
 

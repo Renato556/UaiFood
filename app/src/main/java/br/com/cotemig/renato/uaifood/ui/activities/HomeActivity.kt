@@ -28,11 +28,11 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    fun getEstabelecimentos(){
+    fun getEstabelecimentos() {
         var s = RetrofitInitializer().serviceUaiFood()
         var call = s.getRestaurantes()
 
-        call.enqueue(object : retrofit2.Callback<List<Estabelecimento>>{
+        call.enqueue(object : retrofit2.Callback<List<Estabelecimento>> {
             override fun onResponse(
                 call: Call<List<Estabelecimento>>,
                 response: Response<List<Estabelecimento>>
@@ -43,7 +43,11 @@ class HomeActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<List<Estabelecimento>>, t: Throwable) {
-                Toast.makeText(this@HomeActivity, "Ocorreu um erro, tente novamente", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this@HomeActivity,
+                    "Ocorreu um erro, tente novamente",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         })
     }

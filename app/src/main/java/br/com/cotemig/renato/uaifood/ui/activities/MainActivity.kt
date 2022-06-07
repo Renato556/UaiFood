@@ -18,14 +18,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         var btn_login = findViewById<Button>(R.id.btnLogin)
-        btn_login.setOnClickListener{
+        btn_login.setOnClickListener {
             login()
         }
 
-        var textForgot = findViewById<TextView>(R.id.textForgot);
-        var textRegister = findViewById<TextView>(R.id.textNew);
+        var textForgot = findViewById<TextView>(R.id.textForgot)
+        var textRegister = findViewById<TextView>(R.id.textNew)
 
         textForgot.setOnClickListener {
             getForgotScreen()
@@ -36,18 +35,17 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun getForgotScreen(){
+    fun getForgotScreen() {
         var intent = Intent(this, ForgotActivity::class.java)
         startActivity(intent)
     }
 
-    fun getRegisterScreen(){
+    fun getRegisterScreen() {
         var intent = Intent(this, RegisterActivity::class.java)
         startActivity(intent)
     }
 
-    fun login(){
-
+    fun login() {
         var account = Account()
 
         var s = RetrofitInitializer().serviceAccount()
@@ -59,29 +57,33 @@ class MainActivity : AppCompatActivity() {
 
         var call = s.auth(account)
 
-        call.enqueue(object : retrofit2.Callback<Account>{
+        call.enqueue(object : retrofit2.Callback<Account> {
             override fun onResponse(call: Call<Account>, response: Response<Account>) {
 
-                if(response.code() == 200){
+                if (response.code() == 200) {
                     response.body()?.let {
                         showLogin(it)
                     }
-                }else{
+                } else {
                     Toast.makeText(
-                    this@MainActivity, "Usuário não encontrado", Toast.LENGTH_LONG).show()
+                        this@MainActivity, "Usuário não encontrado", Toast.LENGTH_LONG
+                    ).show()
 
                 }
             }
 
             override fun onFailure(call: Call<Account>, t: Throwable) {
-                Toast.makeText(this@MainActivity, "Ocorreu um erro, tente novamente", Toast.LENGTH_LONG).show()
-
+                Toast.makeText(
+                    this@MainActivity,
+                    "Ocorreu um erro, tente novamente",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         })
 
     }
 
-    fun showLogin(account: Account){
+    fun showLogin(account: Account) {
         var intent = Intent(this, HomeActivity::class.java)
         intent.putExtra("token", account.token)
         intent.putExtra("name", account.name)
@@ -89,5 +91,4 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-
 }

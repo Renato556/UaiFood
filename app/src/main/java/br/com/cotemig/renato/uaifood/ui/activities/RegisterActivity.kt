@@ -23,7 +23,7 @@ class RegisterActivity : AppCompatActivity() {
             arrowBackLogin()
         }
 
-        btnRegister.setOnClickListener{
+        btnRegister.setOnClickListener {
             registerClick()
         }
 
@@ -32,13 +32,13 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    fun arrowBackLogin(){
+    fun arrowBackLogin() {
         var intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
     }
 
-    fun registerClick(){
+    fun registerClick() {
         var name = findViewById<EditText>(R.id.editName)
         var email = findViewById<EditText>(R.id.editEmail)
         var password = findViewById<EditText>(R.id.editPassword)
@@ -56,28 +56,40 @@ class RegisterActivity : AppCompatActivity() {
         call.enqueue(object : retrofit2.Callback<Account> {
             override fun onResponse(call: Call<Account>, response: Response<Account>) {
                 if (response.code() == 200) {
-                    Toast.makeText(this@RegisterActivity, "Conta criada com sucesso!!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        this@RegisterActivity,
+                        "Conta criada com sucesso!!",
+                        Toast.LENGTH_LONG
+                    ).show()
                     showLogin()
                 } else {
-                    Toast.makeText(this@RegisterActivity, "Erro ao criar a conta", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        this@RegisterActivity,
+                        "Erro ao criar a conta",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
             }
 
             override fun onFailure(call: Call<Account>, t: Throwable) {
-                Toast.makeText(this@RegisterActivity, "Informações incorretas, verifique os campos novamente =(", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this@RegisterActivity,
+                    "Informações incorretas, verifique os campos novamente =(",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         })
 
     }
 
 
-    fun showLogin(){
+    fun showLogin() {
         var intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
     }
 
-    fun possuiContaClick(){
+    fun possuiContaClick() {
         var intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()

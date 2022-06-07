@@ -46,7 +46,7 @@ class ProfileActivity : AppCompatActivity() {
         finish()
     }
 
-    fun logout(){
+    fun logout() {
         var intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()

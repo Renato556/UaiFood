@@ -8,8 +8,8 @@ import retrofit2.http.Path
 
 interface UaiFoodService {
     @GET("lista_restaurantes/lista_restaurantes.txt")
-    fun getRestaurantes() : Call<List<Estabelecimento>>
+    fun getRestaurantes(): Call<List<Estabelecimento>>
 
     @GET("restaurantes/{id}.txt")
-    fun getPratos(@Path("id") id : String) : Call<List<Produto>>
+    fun getPratos(@Path("id") id: String): Call<List<Produto>>
 }
