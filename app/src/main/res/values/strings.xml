@@ -34,4 +34,7 @@
     <string name="crie_sua_conta">Crie sua\nconta</string>
     <string name="finalizar_pedido">Finalizar pedido</string>
     <string name="carrinho">Carrinho</string>
+    <string name="limpar_carrinho">Limpar carrinho</string>
+    <string name="pedido_concluido">Pedido concluído</string>
+    <string name="pedido_realizado_com_sucesso">Pedido realizado\ncom sucesso!</string>
 </resources>

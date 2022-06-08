@@ -27,10 +27,11 @@
         android:id="@+id/list_cart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/backEstabelecimentos" />
+        android:layout_below="@id/backEstabelecimentos"
+        android:layout_marginBottom="160dp" />
 
     <Button
-        android:id="@+id/btn_adicionar"
+        android:id="@+id/btn_finalizar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -38,6 +39,18 @@
         android:layout_marginBottom="30dp"
         android:background="@color/primary"
         android:text="@string/finalizar_pedido"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn_limpar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_finalizar"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/primary"
+        android:text="@string/limpar_carrinho"
         android:textAllCaps="false"
         android:textColor="@color/white" />
 

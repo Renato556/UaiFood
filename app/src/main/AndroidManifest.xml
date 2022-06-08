@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.cotemig.renato.uaifood">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".app.AppUaiFood"
         android:allowBackup="true"
@@ -10,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_uaifood_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UaiFood">
+        <activity
+            android:name=".ui.activities.OrderActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.activities.CartActivity"
             android:exported="true" />
@@ -41,7 +46,5 @@
             </intent-filter>
         </activity>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
