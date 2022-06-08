@@ -30,6 +30,7 @@
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
                     android:clickable="true"
+                    android:background="@color/transparent"
                     android:src="@drawable/home" />
 
                 <TextView
