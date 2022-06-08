@@ -5,9 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import br.com.cotemig.renato.uaifood.R
-import br.com.cotemig.renato.uaifood.models.Estabelecimento
+import br.com.cotemig.renato.uaifood.models.Restaurant
 import br.com.cotemig.renato.uaifood.services.RetrofitInitializer
-import br.com.cotemig.renato.uaifood.ui.adapters.EstabelecimentoAdapter
+import br.com.cotemig.renato.uaifood.ui.adapters.RestaurantAdapter
 import retrofit2.Call
 import retrofit2.Response
 
@@ -33,17 +33,17 @@ class HomeActivity : AppCompatActivity() {
         var s = RetrofitInitializer().serviceUaiFood()
         var call = s.getRestaurantes()
 
-        call.enqueue(object : retrofit2.Callback<List<Estabelecimento>> {
+        call.enqueue(object : retrofit2.Callback<List<Restaurant>> {
             override fun onResponse(
-                call: Call<List<Estabelecimento>>,
-                response: Response<List<Estabelecimento>>
+                call: Call<List<Restaurant>>,
+                response: Response<List<Restaurant>>
             ) {
                 response.body()?.let {
                     showListEstabelecimentos(it)
                 }
             }
 
-            override fun onFailure(call: Call<List<Estabelecimento>>, t: Throwable) {
+            override fun onFailure(call: Call<List<Restaurant>>, t: Throwable) {
                 Toast.makeText(
                     this@HomeActivity,
                     "Ocorreu um erro, tente novamente",
@@ -53,20 +53,20 @@ class HomeActivity : AppCompatActivity() {
         })
     }
 
-    fun showListEstabelecimentos(list: List<Estabelecimento>) {
+    fun showListEstabelecimentos(list: List<Restaurant>) {
         var estabelecimento = findViewById<ListView>(R.id.list_Estabelecimentos)
-        estabelecimento.adapter = EstabelecimentoAdapter(this, list)
+        estabelecimento.adapter = RestaurantAdapter(this, list)
 
         estabelecimento.setOnItemClickListener { parent, view, position, id ->
             showProdutos(list[position])
         }
     }
 
-    fun showProdutos(estabelecimento: Estabelecimento) {
-        var intent = Intent(this, ProdutoActivity::class.java)
-        intent.putExtra("id", estabelecimento.id)
-        intent.putExtra("nomeEstabelecimento", estabelecimento.nome)
-        intent.putExtra("imagemEstabelecimento", estabelecimento.imagem)
+    fun showProdutos(restaurant: Restaurant) {
+        var intent = Intent(this, ProductActivity::class.java)
+        intent.putExtra("id", restaurant.id)
+        intent.putExtra("nomeEstabelecimento", restaurant.nome)
+        intent.putExtra("imagemEstabelecimento", restaurant.imagem)
         startActivity(intent)
     }
 

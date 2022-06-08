@@ -9,7 +9,7 @@ import android.widget.ListView
 import android.widget.Toast
 import br.com.cotemig.renato.uaifood.R
 import br.com.cotemig.renato.uaifood.app.AppUaiFood
-import br.com.cotemig.renato.uaifood.models.Produto
+import br.com.cotemig.renato.uaifood.models.Product
 import br.com.cotemig.renato.uaifood.ui.adapters.CartAdapter
 
 class CartActivity : AppCompatActivity() {
@@ -31,11 +31,20 @@ class CartActivity : AppCompatActivity() {
 
         var btnFinalizar = findViewById<Button>(R.id.btn_finalizar)
         btnFinalizar.setOnClickListener {
-            finalizarPedido()
+            if (AppUaiFood.list.size > 0) {
+                finalizarPedido()
+            } else {
+                Toast.makeText(
+                    this@CartActivity,
+                    "Insira pelo menos 1 produto no carrinho",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+
         }
     }
 
-    fun getCart(list: List<Produto>) {
+    fun getCart(list: List<Product>) {
         var produto = findViewById<ListView>(R.id.list_cart)
         produto.adapter = CartAdapter(this, list)
     }

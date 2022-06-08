@@ -1,19 +1,13 @@
 package br.com.cotemig.renato.uaifood.ui.activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import br.com.cotemig.renato.uaifood.R
 import br.com.cotemig.renato.uaifood.app.AppUaiFood
-import br.com.cotemig.renato.uaifood.models.Produto
-import br.com.cotemig.renato.uaifood.services.RetrofitInitializer
-import br.com.cotemig.renato.uaifood.ui.adapters.ProdutoAdapter
-import coil.load
-import retrofit2.Call
-import retrofit2.Response
+import br.com.cotemig.renato.uaifood.models.Product
 
-class DetalheProdutoActivity : AppCompatActivity() {
+class ProductDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhe_produto)
@@ -38,13 +32,13 @@ class DetalheProdutoActivity : AppCompatActivity() {
     }
 
     fun adicionarCarrinho(){
-        var p = Produto()
+        var p = Product()
         p.nomePrato = intent.getStringExtra("nomeProduto").toString()
         p.descricaoPrato = intent.getStringExtra("descProduto").toString()
         p.precoPrato = intent.getStringExtra("precoProduto").toString()
 
         Toast.makeText(
-            this@DetalheProdutoActivity,
+            this@ProductDetailActivity,
             "Adicionado ao carrinho!",
             Toast.LENGTH_SHORT
         ).show()

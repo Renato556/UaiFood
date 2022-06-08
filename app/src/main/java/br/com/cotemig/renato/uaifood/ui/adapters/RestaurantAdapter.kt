@@ -8,11 +8,11 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import br.com.cotemig.renato.uaifood.R
-import br.com.cotemig.renato.uaifood.models.Estabelecimento
+import br.com.cotemig.renato.uaifood.models.Restaurant
 import coil.load
 import coil.transform.RoundedCornersTransformation
 
-class EstabelecimentoAdapter(var context: Context, var list: List<Estabelecimento>) :
+class RestaurantAdapter(var context: Context, var list: List<Restaurant>) :
     BaseAdapter() {
 
     override fun getCount(): Int {

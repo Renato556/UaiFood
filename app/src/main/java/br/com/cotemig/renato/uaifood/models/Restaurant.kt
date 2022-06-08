@@ -1,6 +1,6 @@
 package br.com.cotemig.renato.uaifood.models
 
-class Estabelecimento {
+class Restaurant {
     var id: String = ""
     var imagem: String = ""
     var nome: String = ""

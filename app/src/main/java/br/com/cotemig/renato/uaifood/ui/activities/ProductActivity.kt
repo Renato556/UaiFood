@@ -3,18 +3,16 @@ package br.com.cotemig.renato.uaifood.ui.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.*
 import br.com.cotemig.renato.uaifood.R
-import br.com.cotemig.renato.uaifood.models.Estabelecimento
-import br.com.cotemig.renato.uaifood.models.Produto
+import br.com.cotemig.renato.uaifood.models.Product
 import br.com.cotemig.renato.uaifood.services.RetrofitInitializer
-import br.com.cotemig.renato.uaifood.ui.adapters.ProdutoAdapter
+import br.com.cotemig.renato.uaifood.ui.adapters.ProductAdapter
 import coil.load
 import retrofit2.Call
 import retrofit2.Response
 
-class ProdutoActivity : AppCompatActivity() {
+class ProductActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_produto)
@@ -37,33 +35,33 @@ class ProdutoActivity : AppCompatActivity() {
     fun getProduto(id : String){
         var s = RetrofitInitializer().serviceUaiFood()
         var call = s.getPratos(id)
-        call.enqueue(object : retrofit2.Callback<List<Produto>>{
+        call.enqueue(object : retrofit2.Callback<List<Product>>{
             override fun onResponse(
-                call: Call<List<Produto>>,
-                response: Response<List<Produto>>
+                call: Call<List<Product>>,
+                response: Response<List<Product>>
             ) {
                 response.body()?.let {
                     showListProduto(it)
                 }
             }
 
-            override fun onFailure(call: Call<List<Produto>>, t: Throwable) {
-                Toast.makeText(this@ProdutoActivity, "Ocorreu um erro, tente novamente", Toast.LENGTH_LONG).show()
+            override fun onFailure(call: Call<List<Product>>, t: Throwable) {
+                Toast.makeText(this@ProductActivity, "Ocorreu um erro, tente novamente", Toast.LENGTH_LONG).show()
             }
         })
     }
 
-    fun loadProduto(produto: Produto) {
-        var intent = Intent(this, DetalheProdutoActivity::class.java)
-        intent.putExtra("nomeProduto", produto.nomePrato)
-        intent.putExtra("descProduto", produto.descricaoPrato)
-        intent.putExtra("precoProduto", produto.precoPrato)
+    fun loadProduto(product: Product) {
+        var intent = Intent(this, ProductDetailActivity::class.java)
+        intent.putExtra("nomeProduto", product.nomePrato)
+        intent.putExtra("descProduto", product.descricaoPrato)
+        intent.putExtra("precoProduto", product.precoPrato)
         startActivity(intent)
     }
 
-    fun showListProduto(list : List<Produto>) {
+    fun showListProduto(list : List<Product>) {
         var produto = findViewById<ListView>(R.id.list_item)
-        produto.adapter = ProdutoAdapter(this, list)
+        produto.adapter = ProductAdapter(this, list)
 
         produto.setOnItemClickListener { parent, view, position, id ->
             loadProduto(list[position])

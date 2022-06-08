@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import br.com.cotemig.renato.uaifood.R
-import br.com.cotemig.renato.uaifood.models.Produto
+import br.com.cotemig.renato.uaifood.models.Product
 
-class CartAdapter(var context: Context, var list: List<Produto>) : BaseAdapter() {
+class CartAdapter(var context: Context, var list: List<Product>) : BaseAdapter() {
     override fun getCount(): Int {
         return list.size
     }

@@ -22,10 +22,10 @@
             android:name=".ui.activities.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.DetalheProdutoActivity"
+            android:name=".ui.activities.ProductDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.ProdutoActivity"
+            android:name=".ui.activities.ProductActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activities.ForgotActivity"

@@ -5,13 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ImageView
 import android.widget.TextView
 import br.com.cotemig.renato.uaifood.R
-import br.com.cotemig.renato.uaifood.models.Produto
-import coil.load
+import br.com.cotemig.renato.uaifood.models.Product
 
-class ProdutoAdapter(var context: Context, var list: List<Produto>) : BaseAdapter() {
+class ProductAdapter(var context: Context, var list: List<Product>) : BaseAdapter() {
     override fun getCount(): Int {
         return list.size
     }
