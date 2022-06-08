@@ -15,7 +15,7 @@ import retrofit2.Response
 class ProductActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_produto)
+        setContentView(R.layout.activity_product)
 
         var id = intent.getStringExtra("id").toString()
         var nomeEstabelecimento = findViewById<TextView>(R.id.nome_restaurante)

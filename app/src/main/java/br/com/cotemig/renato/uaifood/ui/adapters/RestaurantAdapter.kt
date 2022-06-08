@@ -28,7 +28,7 @@ class RestaurantAdapter(var context: Context, var list: List<Restaurant>) :
     }
 
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
-        var view = LayoutInflater.from(context).inflate(R.layout.item_list_estabelecimento, null)
+        var view = LayoutInflater.from(context).inflate(R.layout.item_list_restaurant, null)
 
         var imagem = view.findViewById<ImageView>(R.id.imagem_estabelecimento)
         imagem.load(list[p0].imagem) { transformations(RoundedCornersTransformation((100).toFloat())) }

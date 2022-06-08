@@ -23,7 +23,7 @@ class ProductAdapter(var context: Context, var list: List<Product>) : BaseAdapte
     }
 
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
-        var view = LayoutInflater.from(context).inflate(R.layout.item_list_produtos, null)
+        var view = LayoutInflater.from(context).inflate(R.layout.item_list_products, null)
 
         var nomePrato = view.findViewById<TextView>(R.id.nome_produto)
         nomePrato.text = list[p0].nomePrato

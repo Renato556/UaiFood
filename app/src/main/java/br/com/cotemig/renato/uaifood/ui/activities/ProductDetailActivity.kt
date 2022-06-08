@@ -10,7 +10,7 @@ import br.com.cotemig.renato.uaifood.models.Product
 class ProductDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detalhe_produto)
+        setContentView(R.layout.activity_product_detail)
 
         var nomeProduto = findViewById<TextView>(R.id.nome_produto_detalhe)
         var descProduto = findViewById<TextView>(R.id.desc_produto_detalhe)
