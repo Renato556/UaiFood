@@ -81,6 +81,5 @@ class HomeActivity : AppCompatActivity() {
     fun showCart() {
         var intent = Intent(this, CartActivity::class.java)
         startActivity(intent)
-        finish()
     }
 }

@@ -94,7 +94,6 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
-                    android:clickable="true"
                     android:src="@drawable/shopping_bag" />
 
                 <TextView
@@ -127,7 +126,6 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
-                    android:clickable="true"
                     android:src="@drawable/account_circle" />
 
                 <TextView

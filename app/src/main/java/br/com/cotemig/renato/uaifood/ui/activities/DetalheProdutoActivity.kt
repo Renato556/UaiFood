@@ -35,26 +35,6 @@ class DetalheProdutoActivity : AppCompatActivity() {
         arrowBack.setOnClickListener {
             backProdutos()
         }
-
-        adicionaRemove()
-    }
-
-    fun adicionaRemove() {
-        var btnMais = findViewById<Button>(R.id.btn_mais)
-        var btnMenos = findViewById<Button>(R.id.btn_menos)
-        var txtQtd = findViewById<TextView>(R.id.txt_qtd)
-
-        btnMais.setOnClickListener {
-            var txtNovaQtd = findViewById<TextView>(R.id.txt_qtd)
-            txtNovaQtd.text = (txtQtd.text.toString().toInt() + 1).toString()
-        }
-
-        btnMenos.setOnClickListener {
-            var txtNovaQtd = findViewById<TextView>(R.id.txt_qtd)
-            if (txtQtd.text.toString().toInt() > 1) {
-                txtNovaQtd.text = (txtQtd.text.toString().toInt() - 1).toString()
-            }
-        }
     }
 
     fun adicionarCarrinho(){
@@ -66,7 +46,7 @@ class DetalheProdutoActivity : AppCompatActivity() {
         Toast.makeText(
             this@DetalheProdutoActivity,
             "Adicionado ao carrinho!",
-            Toast.LENGTH_LONG
+            Toast.LENGTH_SHORT
         ).show()
 
         AppUaiFood.list.add(p)

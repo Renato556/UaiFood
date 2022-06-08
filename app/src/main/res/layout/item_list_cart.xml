@@ -6,7 +6,7 @@
     android:layout_marginTop="10dp">
 
     <ImageView
-        android:id="@+id/imagem_produto"
+        android:id="@+id/imagem_produto_carrinho"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_centerVertical="true"
@@ -14,31 +14,31 @@
         android:src="@mipmap/ic_launcher_uaifood" />
 
     <TextView
-        android:id="@+id/nome_produto"
+        android:id="@+id/nome_produto_carrinho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
-        android:layout_toEndOf="@+id/imagem_produto"
+        android:layout_toEndOf="@+id/imagem_produto_carrinho"
         android:fontFamily="@font/roboto_bold" />
 
     <TextView
-        android:id="@+id/descricao_produto"
+        android:id="@+id/descricao_produto_carrinho"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/nome_produto"
+        android:layout_below="@+id/nome_produto_carrinho"
         android:layout_marginStart="20dp"
-        android:layout_toEndOf="@+id/imagem_produto"
+        android:layout_toEndOf="@+id/imagem_produto_carrinho"
         android:fontFamily="@font/roboto_regular" />
 
     <TextView
-        android:id="@+id/valor_produto"
+        android:id="@+id/valor_produto_carrinho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/descricao_produto"
+        android:layout_below="@+id/descricao_produto_carrinho"
         android:layout_marginStart="20dp"
         android:layout_marginTop="2dp"
-        android:layout_toEndOf="@+id/imagem_produto"
+        android:layout_toEndOf="@+id/imagem_produto_carrinho"
         android:fontFamily="@font/roboto_regular"
         android:textColor="@color/green" />
 

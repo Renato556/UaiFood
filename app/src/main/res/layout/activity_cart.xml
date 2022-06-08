@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activities.CartActivity">
 
+    <ImageButton
+        android:id="@+id/backEstabelecimentos"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/transparent"
+        android:src="@drawable/arrow_back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/carrinho"
+        android:textSize="16sp" />
+
     <ListView
         android:id="@+id/list_cart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/backEstabelecimentos" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btn_adicionar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/primary"
+        android:text="@string/finalizar_pedido"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

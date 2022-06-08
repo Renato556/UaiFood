@@ -32,4 +32,6 @@
     <string name="email_cadastrado">Email cadastrado</string>
     <string name="logout">Logout</string>
     <string name="crie_sua_conta">Crie sua\nconta</string>
+    <string name="finalizar_pedido">Finalizar pedido</string>
+    <string name="carrinho">Carrinho</string>
 </resources>
